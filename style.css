@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: #E5E5E5;
+}
+
+.container {
+    display: grid;
+    width:  100%;
+    height: 100%;
+    grid-template-areas:
+        "logo section1 section1 section2 ."
+        "logo section1 section1 section2 ."
+        "logo section1 section1 section2 ."
+        "logo button button button ."
+        "footer footer footer footer footer";
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+    margin-top:  20%;
+    margin-left: 20%;
+}
+
+.section1 {
+    grid-area: section1;
+    width:      100%;
+    margin-top: 15%;
+}
+
+.entrada-texto {
+    width:        100%;
+    height:       420px;
+    padding-left:  4px;
+    font-size:    26px;
+    line-height:  125%;
+    color: #0A3871;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+}
+
+.entrada-texto:focus {
+    outline: none;
+}
+
+.regra {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.alerta {
+    font-size: 13px;
+    margin-left: 10px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn-criptografar {
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 300px;
+    height: 65px;
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-criptografar:hover {
+    transform: scale(0.98, 0.98);
+    opacity: 0.9;
+}
+
+.btn-descriptografar {
+    font-size: 20px;
+    color: #0A3871;
+    width: 300px;
+    height: 65px;
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    margin-right: 15%;
+    cursor: pointer;
+}
+
+.btn-descriptografar:hover {
+    transform: scale(0.98, 0.98);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.section2 {
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 340px;
+    margin: 10% 10% 10% 0;
+}
+
+.mensagem {
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.saida-texto {
+    display: flex;
+    width: 340px;
+    height: 700px;
+    padding: 20px;
+    font-size: 26px;
+    line-height: 120%;
+    color: #0A3871;
+    background-color: #FFFFFF;
+    background-image: url("imagens/aviso_mensagem.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 20%;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 28px;
+    resize: none;
+}
+
+.saida-texto:focus {
+    outline: none;
+}
+
+.aviso-um {
+    position: absolute;
+    color: #343A40;
+    font-size: 22px;
+    width: 250px;
+    margin-top: 20%;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.aviso-dois {
+    position: absolute;
+    color: #495057;
+    font-size: 14px;
+    width: 250px;
+    margin-top: 50%;
+    font-weight: 400;
+    text-align: center;
+    line-height: 150%;
+    background-color: #FFFFFF;
+}
+
+.btn-copiar {
+    position: absolute;
+    font-size: 20px;
+    color: #0A3871;
+    width: 300px;
+    height: 65px;
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    margin-top: 440px;
+    cursor: pointer;
+}
+
+.btn-copiar:hover {
+    transform: scale(0.98, 0.98);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.footer,
+p {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    color: #FFFFFF;
+    background-color: #0A3871;
+}
+
+@media (max-width: 1024px) {
+
+    .logo {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    .section1 {
+        margin-left: 30px;
+        margin-top: 120px;
+    }
+
+    .btn-descriptografar {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    .section1 {
+        margin-left: 10px;
+        margin-top: 120px;
+    }
+
+    .btn-descriptografar {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 30px auto;
+    }
+
+    .section1 {
+        display: flex;
+        margin: 0 auto;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entrada-texto {
+        text-align: center;
+    }
+
+    .regra {
+        margin: 5px 0;
+        justify-content: center;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+        margin: 5px auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-descriptografar {
+        margin: 10px auto;
+    }
+
+    .section2 {
+        margin: 10px auto;
+    }
+
+    .footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .section2 {
+        margin: 10px auto;
+    }
+
+    .saida-texto {
+        width: 310px;
+    }
+}
