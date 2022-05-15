@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador de texto</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="logo">
+            <a href="index.html"><img src="imagens/logo.svg" alt="Logo Alura"></a>
+        </header>
+
+        <section class="section1">
+            <form>
+                <textarea class="entrada-texto" name="text-input" id="text-input" cols="30" rows="10"
+                    placeholder="digite seu texto..." ></textarea>
+
+                <div class="regra">
+                    <img src="imagens/icone_exclamacao.svg" alt="">
+                    <h3 class="alerta">Apenas letras minúsculas e sem acento.</h3>
+                </div>
+
+                <div class="botoes">
+                    <button class="btn-criptografar" onclick="btnEncriptar()">Criptografar</button>
+                    <button class="btn-descriptografar" onclick="btnDecriptar()">Descriptografar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="section2">
+            <div class="mensagem">
+                <textarea class="saida-texto" name="text-output" id="text-output" cols="30" rows="10"></textarea>
+                <h2 class="aviso-um">Digite uma mensagem!</h2>
+                <h3 class="aviso-dois">Digite um texto que você deseja criptografar ou descriptografar.</h3>
+                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Copyright manuel_irineu 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
